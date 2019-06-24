@@ -13,10 +13,25 @@ var PLAYER;
     PLAYER[PLAYER["MusicBox"] = 1] = "MusicBox";
 })(PLAYER = exports.PLAYER || (exports.PLAYER = {}));
 var Player = /** @class */ (function () {
-    function Player() {
+    function Player(name, syllable, tone) {
+        this._name = name;
+        this._syllable = syllable;
+        this._tone = tone;
     }
     Player.prototype.play = function (music) {
-        console.log("test");
+        if (music.player !== this._name) {
+            console.error("[FAIL]播放器类型不符");
+            return;
+        }
+        else if (music.tone !== this._tone) {
+            console.error("[FAIL]播放器音调不符");
+            return;
+        }
+        else if (music.syllable !== this._syllable) {
+            console.error("[FAIL]播放器音节数不符");
+            return;
+        }
+        console.log("[SUCCESS]匹配播放器类型及音节数");
     };
     return Player;
 }());

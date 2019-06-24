@@ -1,15 +1,28 @@
-import {TONE, PLAYER} from "./Player";
+import {PLAYER, TONE} from "./Player";
 
 export class Music {
-    private name: String;
-    private player: PLAYER;
-    private tone: TONE;
-    private syllable: Number;
+
+    private _name: String;
+    private _player: PLAYER;
+    private _tone: TONE;
+    private _syllable: Number;
+
+    get syllable(): Number {
+        return this._syllable;
+    }
+
+    get tone(): TONE {
+        return this._tone;
+    }
+
+    get player(): PLAYER {
+        return this._player;
+    }
 
     constructor(name: String, player: PLAYER, syllable: Number, tone: TONE) {
-        this.name = name;
-        this.player = player;
-        this.tone = tone;
-        this.syllable = syllable;
+        this._name = name;
+        this._player = player;
+        this._tone = tone;
+        this._syllable = syllable;
     }
 }
