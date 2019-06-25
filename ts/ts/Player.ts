@@ -1,19 +1,14 @@
 import {Music} from "./Music";
+import {Type} from "./Type";
+import {Tone} from "./Tone";
 
-export enum TONE {
-    A, B, C, D,
-}
-
-export enum PLAYER {
-    Kalimba, MusicBox,
-}
 
 export class Player {
-    private _name: PLAYER;
-    private _tone: TONE;
+    private _name: Type;
+    private _tone: Tone;
     private _syllable: Number;
 
-    constructor(name: PLAYER, syllable: Number, tone: TONE) {
+    constructor(name: Type, syllable: Number, tone:Tone) {
         console.log("[FUNCTION]constructor:Player");
         this._name = name;
         this._syllable = syllable;
@@ -23,19 +18,19 @@ export class Player {
     play(music: Music): void {
         console.log("[FUNCTION]play:Player");
         if (music.player !== this._name) {
-            console.error("[MISMATCH]播放器类型");
+            console.error("[MISMATCH]播放器类型-play:Player");
             return;
         }
         else if (music.tone !== this._tone) {
-            console.error("[MISMATCH]播放器音调");
+            console.error("[MISMATCH]播放器音调-play:Player");
             return;
         }
         else if (music.syllable !== this._syllable) {
-            console.error("[MISMATCH]播放器音节数");
+            console.error("[MISMATCH]播放器音节数-play:Player");
             return;
         }
-        console.log("[MATCH]播放器类型及音节数");
-        //TODO 播放music
-        console.log("[COMPLETE]音乐播放")
+        console.log("[MATCH]type&tone&syllable");
+        // TODO 播放music
+        console.log("[COMPLETE]play:Player")
     }
 }

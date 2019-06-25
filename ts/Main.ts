@@ -1,7 +1,11 @@
-import {Music} from "./Music";
-import {PLAYER, Player, TONE} from "./Player";
+import {Instrument} from "./ts/Instrument";
+import {Type} from "./ts/Type";
+import {Tone} from "./ts/Tone";
+import {Music} from "./ts/Music";
 
-var player = new Player(PLAYER.Kalimba, 18, TONE.B);
-var music = new Music("天空之城", PLAYER.Kalimba, 17, TONE.B);
 
-player.play(music);
+var ins = new Instrument(Type.Kalimba, 18, Tone.B);
+var music = new Music("天空之城", Type.Kalimba, 17, Tone.B);
+ins.play(music);
+music.save();
+// player.play(music);
