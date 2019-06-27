@@ -1,7 +1,14 @@
 {
   "pages": [
+    "pages/player/player",
+
     "pages/init/init",
-    "pages/index/index"
+    "pages/menu/menu",
+    
+    "pages/sheet/sheet",
+    "pages/user/user",
+    "pages/reflection/reflection",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",

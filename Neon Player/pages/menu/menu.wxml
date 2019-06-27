@@ -1,0 +1,5 @@
+<!--pages/menu/menu.wxml-->
+<view class="page">
+  <searchbar />
+  <!-- 需将searchbar修改为传参格式，并添加catchtap，当点击时可能与下方内容部分调节可见性 -->
+</view>

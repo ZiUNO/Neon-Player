@@ -1,4 +1,4 @@
-// pages/init/init.js
+// pages/menu/menu.js
 Page({
 
   /**
@@ -19,7 +19,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.searchbar = this.selectComponent('#searchbar')
   },
 
   /**
@@ -62,15 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  /**
-   * 进入主菜单
-   */
-  start: function () {
-    // TODO 添加用户授权
-    wx.redirectTo({
-      url: '../menu/menu',
-    })
   }
 })

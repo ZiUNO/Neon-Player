@@ -1,2 +1,11 @@
 <!--pages/init/init.wxml-->
-<text>pages/init/init.wxml</text>
+<view class="page">
+  <view class="init">
+    <view id="init_view_logo">
+      <image id="init_image_logo" src="../../image/logo.png"/>
+    </view>
+    <view id="init_view_start">
+      <button id="init_button_start" catchtap="start">START</button>
+    </view>
+  </view>
+</view>

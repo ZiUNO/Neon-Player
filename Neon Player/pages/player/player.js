@@ -1,4 +1,4 @@
-// pages/init/init.js
+// pages/player/player.js
 Page({
 
   /**
@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.
   },
 
   /**
@@ -62,15 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  /**
-   * 进入主菜单
-   */
-  start: function () {
-    // TODO 添加用户授权
-    wx.redirectTo({
-      url: '../menu/menu',
-    })
   }
 })

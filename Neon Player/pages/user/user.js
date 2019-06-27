@@ -1,4 +1,4 @@
-// pages/init/init.js
+// pages/user/user.js
 Page({
 
   /**
@@ -62,15 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  /**
-   * 进入主菜单
-   */
-  start: function () {
-    // TODO 添加用户授权
-    wx.redirectTo({
-      url: '../menu/menu',
-    })
   }
 })

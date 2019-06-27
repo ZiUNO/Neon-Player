@@ -1,1 +1,31 @@
 /* pages/init/init.wxss */
+.init{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#init_view_logo{
+  display: flex;
+  height: 800rpx;
+  align-items: center;
+}
+
+#init_image_logo{
+  width: 350rpx;
+  height: 350rpx;
+}
+
+#init_view_start{
+  display: flex;
+  align-items: center;
+}
+
+#init_button_start{
+  width: 230rpx;
+  border: 9rpx #fff solid;
+  border-radius: 48rpx;
+  color: #fff;
+  background-color: transparent;
+  font-size: 14px;
+}
