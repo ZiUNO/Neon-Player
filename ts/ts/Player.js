@@ -9,18 +9,9 @@ var Player = /** @class */ (function () {
     }
     Player.prototype.play = function (music) {
         console.log("[FUNCTION]play:Player");
-        if (music.player !== this._name) {
-            console.error("[MISMATCH]播放器类型-play:Player");
-            return;
-        }
-        else if (music.tone !== this._tone) {
-            console.error("[MISMATCH]播放器音调-play:Player");
-            return;
-        }
-        else if (music.syllable !== this._syllable) {
-            console.error("[MISMATCH]播放器音节数-play:Player");
-            return;
-        }
+        console.assert(music.player === this._name, "[MISMATCH]type-play:Player");
+        console.assert(music.tone === this._tone, "[MISMATCH]tone-play:Player");
+        console.assert(music.syllable === this._syllable, "[MISMATCH]syllable-play:Player");
         console.log("[MATCH]type&tone&syllable");
         // TODO 播放music
         console.log("[COMPLETE]play:Player");

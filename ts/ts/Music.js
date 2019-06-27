@@ -1,16 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var MusicContent = /** @class */ (function () {
-    function MusicContent() {
-    }
-    return MusicContent;
-}());
-exports.MusicContent = MusicContent;
+var Type_1 = require("./Type");
+var Tone_1 = require("./Tone");
 var Music = /** @class */ (function () {
-    function Music(name, player, syllable, tone) {
+    function Music(player, syllable, tone) {
+        this._name = null;
         this._content = null;
         console.log("[FUNCTION]constructor:Music");
-        this._name = name;
         this._player = player;
         this._tone = tone;
         this._syllable = syllable;
@@ -36,6 +32,16 @@ var Music = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(Music.prototype, "name", {
+        get: function () {
+            return this._name;
+        },
+        set: function (value) {
+            this._name = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(Music.prototype, "content", {
         get: function () {
             return this._content;
@@ -49,12 +55,14 @@ var Music = /** @class */ (function () {
     Music.prototype.save = function (path) {
         if (path === void 0) { path = "指定路径"; }
         console.log("[FUNCTION]save:Music");
-        if (this._content === null) {
-            console.error("[EMPTY]音乐内容-save:Music");
-            return;
-        }
+        this._name = this._name === null ? "未命名" : this._name;
         // TODO 将音乐内容以json文件存储在指定位置path
         console.log("[COMPLETE]save:Music");
+    };
+    Music.load = function (musicFile) {
+        var music = new Music(Type_1.Type.Kalimba, 17, Tone_1.Tone.B);
+        // TODO 读取指定位置的json音乐文件
+        return music;
     };
     return Music;
 }());

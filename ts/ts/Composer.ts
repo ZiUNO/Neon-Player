@@ -1,26 +1,26 @@
 import {Type} from "./Type";
 import {Tone} from "./Tone";
-import {Music, MusicContent} from "./Music";
-
+import {Music} from "./Music";
 
 export class Composer {
-    private _name: Type;
-    private _tone: Tone;
-    private _syllable: Number;
+    private readonly _type: Type;
+    private readonly _tone: Tone;
+    private readonly _syllable: number;
 
-    constructor(name: Type, syllable: Number, tone: Tone) {
+    constructor(type: Type, syllable: number, tone: Tone) {
         console.log("[FUNCTION]constructor:Composer");
-        this._name = name;
+        this._type = type;
         this._syllable = syllable;
         this._tone = tone;
     }
 
-    compose(musicName: String, player:Type, syllable:Number, tone:Tone, rawMusic: String): Music {
+    public compose(content: number[][]): Music {
         console.log("[FUNCTION]compose:Composer");
-        let music = new Music(musicName, this._name, this._syllable, this._tone);
-        let musicContent = new MusicContent();
-        // TODO 根据原始音乐处理musicContent对象
-        music.content = musicContent;
+        for (let sentence in content)
+            console.assert(content[sentence].length === this._syllable, "[MISMATCH]length of content item-compose:Composer");
+        let music = new Music(this._type, this._syllable, this._tone);
+        music.content = content;
+        console.log("[COMPLETE]compose:Composer");
         return music;
     }
 }

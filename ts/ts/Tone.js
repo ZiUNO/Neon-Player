@@ -7,4 +7,4 @@ var Tone;
     Tone[Tone["C"] = 2] = "C";
     Tone[Tone["D"] = 3] = "D";
 })(Tone = exports.Tone || (exports.Tone = {}));
-//# sourceMappingURL=tone.js.map
+//# sourceMappingURL=Tone.js.map

@@ -5,4 +5,4 @@ var Type;
     Type[Type["Kalimba"] = 0] = "Kalimba";
     Type[Type["MusicBox"] = 1] = "MusicBox";
 })(Type = exports.Type || (exports.Type = {}));
-//# sourceMappingURL=TYPE.js.map
+//# sourceMappingURL=Type.js.map
